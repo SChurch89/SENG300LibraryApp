@@ -8,7 +8,7 @@ public class Book {
 	private int books_count;
 	private int isbn;
 	private double isbn13;
-	private ArrayList<String> authors;
+	private String[] authors;
 	private float original_publication_year;
 	private String original_title;
 	private String title;
@@ -25,7 +25,7 @@ public class Book {
 	private String image_url;
 	private String small_image_url;
 	
-	public Book(int book_id, int goodreads_book_id, int best_book_id, int work_id, int books_count, int isbn, double isbn13, ArrayList<String> authors, float original_publication_year, String original_title, String title, String language_code, float average_rating, int ratings_count, int work_ratings_count, int work_text_reviews_count, int ratings_1, int ratings_2, int ratings_3, int ratings_4, int ratings_5, String image_url, String small_image_url) {
+	public Book(int book_id, int goodreads_book_id, int best_book_id, int work_id, int books_count, int isbn, double isbn13, String[] authors, float original_publication_year, String original_title, String title, String language_code, float average_rating, int ratings_count, int work_ratings_count, int work_text_reviews_count, int ratings_1, int ratings_2, int ratings_3, int ratings_4, int ratings_5, String image_url, String small_image_url) {
 		this.book_id = book_id;
 		this.goodreads_book_id = goodreads_book_id;
 		this.best_book_id = best_book_id;
@@ -81,7 +81,7 @@ public class Book {
 		return isbn13;
 	}
 	
-	public ArrayList<String> get_authors() {
+	public String[] get_authors() {
 		return authors;
 	}
 	
@@ -173,7 +173,7 @@ public class Book {
 		this.isbn13 = isbn13;
 	}
 	
-	public void set_authors(ArrayList<String> authors) {
+	public void set_authors(String authors) {
 		this.authors = authors;
 	}
 	
