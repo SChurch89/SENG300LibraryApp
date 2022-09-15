@@ -23,4 +23,23 @@ public class main {
         login();
         //create();ma
     }
-Now in this article on Library Ma
+ 
+    public static ArrayList<Book> readBooks() {
+		      ArrayList<Book> books = new ArrayList<Book>();
+		      try {
+			         File bookFile = new File("books.csv");
+		          Scanner myReader = new Scanner(bookFile);
+		          myReader.nextLine();
+		          while (myReader.hasNextLine()) {		        
+		    	         String[] bookInfo = myReader.nextLine().split(",", 23);
+		    	         books.add(new Book(Integer.parseInt(bookInfo[0]), Integer.parseInt(bookInfo[1]), Integer.parseInt(bookInfo[2]), Integer.parseInt(bookInfo[3]), Integer.parseInt(bookInfo[4]), bookInfo[5], bookInfo[6], Float.parseFloat(bookInfo[7]), bookInfo[8], bookInfo[9], bookInfo[10], Float.parseFloat(bookInfo[11]), Integer.parseInt(bookInfo[12]), Integer.parseInt(bookInfo[13]), Integer.parseInt(bookInfo[14]), Integer.parseInt(bookInfo[15]), Integer.parseInt(bookInfo[16]), Integer.parseInt(bookInfo[17]), Integer.parseInt(bookInfo[18]), Integer.parseInt(bookInfo[19]), bookInfo[20], bookInfo[21], bookInfo[22]));
+		          }
+		          myReader.close();
+		      } catch (FileNotFoundException e) {
+		   	      System.out.println("Could not find the file.");
+	    	      e.printStackTrace();
+	       }
+		  
+		      return books;
+	   }
+}
