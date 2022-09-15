@@ -6,8 +6,8 @@ public class Book {
 	private int best_book_id;
 	private int work_id;
 	private int books_count;
-	private int isbn;
-	private double isbn13;
+	private String isbn;
+	private String isbn13;
 	private float original_publication_year;
 	private String original_title;
 	private String title;
@@ -25,7 +25,7 @@ public class Book {
 	private String small_image_url;
 	private String authors;
 	
-	public Book(int book_id, int goodreads_book_id, int best_book_id, int work_id, int books_count, int isbn, double isbn13, float original_publication_year, String original_title, String title, String language_code, float average_rating, int ratings_count, int work_ratings_count, int work_text_reviews_count, int ratings_1, int ratings_2, int ratings_3, int ratings_4, int ratings_5, String image_url, String small_image_url, String authors) {
+	public Book(int book_id, int goodreads_book_id, int best_book_id, int work_id, int books_count, String isbn, String isbn13, float original_publication_year, String original_title, String title, String language_code, float average_rating, int ratings_count, int work_ratings_count, int work_text_reviews_count, int ratings_1, int ratings_2, int ratings_3, int ratings_4, int ratings_5, String image_url, String small_image_url, String authors) {
 		this.book_id = book_id;
 		this.goodreads_book_id = goodreads_book_id;
 		this.best_book_id = best_book_id;
@@ -73,11 +73,11 @@ public class Book {
 		return books_count;
 	}
 	
-	public int get_isbn() {
+	public String get_isbn() {
 		return isbn;
 	}
 	
-	public double get_isbn13() {
+	public String get_isbn13() {
 		return isbn13;
 	}
 	
@@ -165,11 +165,11 @@ public class Book {
 		this.books_count = books_count;
 	}
 	
-	public void set_isbn(int isbn) {
+	public void set_isbn(String isbn) {
 		this.isbn = isbn;
 	}
 	
-	public void set_isbn13(float isbn13) {
+	public void set_isbn13(String isbn13) {
 		this.isbn13 = isbn13;
 	}
 	
