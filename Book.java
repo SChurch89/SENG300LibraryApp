@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Book {
 	private int book_id;
 	private int goodreads_book_id;
